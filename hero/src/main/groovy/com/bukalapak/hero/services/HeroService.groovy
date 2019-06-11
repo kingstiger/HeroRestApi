@@ -50,10 +50,10 @@ class HeroService {
     persisted.abilities.removeAll(toBeRemoved)
     // assign persisted entity as the hero
     hero.abilities.each {
-      if (it.id == null) {
+      
         it.hero = persisted
         persisted.abilities.add(it)
-      }
+      
     }
 
     heroRepository.save(persisted)
